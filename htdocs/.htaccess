@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule \.(txt|pdf|doc|zip|jpg|png|jpeg|gif|swf|css|js|ttf|otf|woff|eot|svg|woff2)$ - [L]
+  RewriteRule ^(robots.txt|batch)($|/) - [L,QSA]
+  RewriteRule ^(.*)$ index.php?url=$1 [PT,QSA,L]
+</IfModule>
