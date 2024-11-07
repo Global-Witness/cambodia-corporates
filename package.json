@@ -1,0 +1,51 @@
+{
+	"name": "cambodia-corpoeations",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "NODE_OPTIONS=--max-old-space-size=8192 vite dev",
+		"build": "NODE_OPTIONS=--max-old-space-size=8192 vite build",
+		"preview": "vite preview",
+		"test": "npm run test:integration && npm run test:unit",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"test:integration": "playwright test",
+		"test:unit": "vitest",
+		"postinstall": "cp ./node_modules/sql.js/dist/sql-wasm.wasm ./static/sql-wasm.wasm"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.28.1",
+		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-node": "^5.2.0",
+		"@sveltejs/adapter-static": "^3.0.2",
+		"@sveltejs/adapter-vercel": "^5.4.1",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@types/eslint": "^8.56.7",
+		"@types/lodash": "^4.17.13",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.36.0",
+		"globals": "^15.0.0",
+		"node-fetch": "^3.3.2",
+		"prettier": "^3.1.1",
+		"prettier-plugin-svelte": "^3.1.2",
+		"svelte": "^4.2.7",
+		"svelte-check": "^3.6.0",
+		"tslib": "^2.4.1",
+		"typescript": "^5.0.0",
+		"typescript-eslint": "^8.0.0-alpha.20",
+		"vite": "^5.0.3",
+		"vite-plugin-top-level-await": "^1.4.2",
+		"vite-plugin-wasm": "^3.3.0",
+		"vitest": "^1.2.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"js-levenshtein": "^1.1.6",
+		"lodash": "^4.17.21",
+		"sql.js": "^1.10.3"
+	}
+}

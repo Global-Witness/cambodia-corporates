@@ -1,0 +1,151 @@
+
+h1, h2, h3 { 
+    .titillium_bld; 
+    text-transform: uppercase; 
+}
+
+
+.site-title { 
+    color: @Darkest;
+    &:first-line { 
+        color: @Grey;
+    }
+}
+.project > div > p:nth-child(2) { 
+    /*
+    font-size: 22px; 
+    line-height: 180%;
+    */
+    margin: 40px auto; 
+}
+
+p, p ~ ul > li, p ~ ol > li {
+    font-size: 18px; 
+}
+.card p, .card  ul > li { font-size: 14px; }
+
+.nav-pills > li > a { 
+    .border-radius(0px); 
+    background: @Darkest url('../img/white-grunge-middle.png');
+    color: white; 
+    .titillium_bld;
+    text-transform: uppercase; 
+    padding: 10px 3px; 
+    font-size: 14px;
+    
+    &:hover, &:focus, &:active, &.help-tab { 
+        background-color:  @Yellow; 
+        color: @Darkest;
+    }
+    
+}
+.date, .chairmen {
+    text-transform: uppercase; 
+    & ~ h3 { 
+        margin-top: 0px; 
+    }
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover { background-color: @Red; }
+
+.alert-nodata { 
+    background: fade(@Yellow, 95%) url('../img/white-grunge.png');
+    margin: 25px auto;
+    padding: 25px; 
+}
+
+.display {
+    .playfair;
+}
+
+.highlight { 
+    background: @Yellow;
+    color: @Darkest;
+    display: inline-block; 
+    padding: 0px 3px; 
+} 
+.highwhite { 
+    background: white;
+    color: @Darkest;
+    display: inline-block; 
+    padding: 0px 3px; 
+} 
+
+.card { 
+    background: rgba(255,255,255,0.5);
+    border-bottom: 5px solid @Grey;
+    padding: 25px;    
+    margin: 20px auto;
+    &.exact-match { border-bottom: 5px solid darken(@Grey, 10%); }
+    h3 { 
+        .titillium_reg; 
+        font-size: 18px;
+        text-transform: uppercase;
+        .entry-name { 
+            clear: both; display: block; 
+        }
+    }
+    h4, h5 {
+        .titillium_bld; 
+        font-size: 16px;
+        text-transform: uppercase;    
+        
+        margin-bottom: 5px; 
+       // border-top: 1px solid fade(@Grey, 25%);
+        padding-top: 10px; 
+        a {
+            color: @Darkest; 
+        }
+        &.label-title { border-top: none; font-size: 14px; color: @Grey;
+            a { color: @Grey; }
+        }
+    }
+    
+    
+    ul { list-style: none; padding: 0px; margin: 15px 0px 0px; 
+        li {
+            -webkit-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            display: block; 
+            margin: 10px 0px;
+            padding-left: 20px; 
+            border-left: 5px solid fade(@Grey, 0%);
+            background: rgba(255,255,255,0);
+            
+            &:hover {
+                border-left: 5px solid fade(@Grey, 25%);
+                background: rgba(255,255,255,0.8);
+            }
+            h5 { margin-top: 0px; padding-top: 5px;  }
+        }
+    }
+    span.small-label {
+        font-size: 10px;
+        text-align: right;
+        text-transform: uppercase;
+        display: block;
+        float: right; 
+    }
+}
+
+.alert { .border-radius(0px); }
+@media (min-width: @screen-sm-min) { // tablets and up
+    #results { 
+        padding-top: 20px; 
+        
+        & > h1:first-child { 
+            margin-top: 0px; 
+        }
+    }
+    .card {
+        h3 { 
+            .entry-name {
+                display: inline; clear: none;
+            }
+        }
+    
+    } 
+    /** tabs **/
+    .nav-pills > li > a { padding: 10px 15px; font-size: 16px; }
+    
+}
