@@ -36,8 +36,8 @@
 					>
 				</li>
 				<li><a href="https://github.com/Global-Witness/cambodia-corporates">Source Code</a></li>
-				<li><a target="_self" href="/project/"><i class="fa fa-info"></i> About the Project</a></li>
-				<li><a target="_self" href="/contact/"><i class="fa fa-paper-plane"></i> Contact</a></li>
+				<li><a target="_self" href="/project"><i class="fa fa-info"></i> About the Project</a></li>
+				<li><a target="_self" href="/contact"><i class="fa fa-paper-plane"></i> Contact</a></li>
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->
